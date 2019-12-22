@@ -104,8 +104,9 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: "raleway-ex", sans-serif;
+  font-family: "raleway", sans-serif;
   overflow-x: hidden;
+  overflow-x-opacity: 1;
 }
 
 .img-responsive {
@@ -119,12 +120,12 @@ body {
 }
 
 ::-moz-selection {
-  background-color: orange;
+  background-color: #F9C869;
   color: #fff;
 }
 
 ::selection {
-  background-color: orange;
+  background-color: #F9C869;
   color: #fff;
 }
 

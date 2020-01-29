@@ -8534,14 +8534,24 @@ body {
   opacity: 1;
 }
 
-body .site-header {
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ishome .site-header {
   min-height: 700px;
   height: 100vh;
   background-color: #1A1A1A;
   color: #FFF;
 }
 
-body .top-line {
+.ishome .top-line {
   padding-top: 40px;
   position: absolute;
   width: 100%;
@@ -8579,16 +8589,6 @@ section {
   background-color: #FFF;
 }
 
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
 .hamburger {
   position: absolute;
   right: 0;
@@ -8599,12 +8599,85 @@ section {
   width: 34px;
 }
 
-.hamburger .hamburger-box .hamburger-inner, .hamburger .hamburger-box .hamburger-inner::before, .hamburger .hamburger-box .hamburger-inner::after {
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 34px;
   height: 2px;
   border-radius: 0;
-  color: #FFF;
   background-color: #FFF;
+}
+
+.mm-navbar .mm-title {
+  padding: 0;
+}
+
+.mm-navbar {
+  height: auto;
+  position: relative;
+  border: 0;
+}
+
+.mm-navbar .mm-title img {
+  width: 128px;
+  height: auto;
+  margin: 10px 0 35px;
+}
+
+html.mm-opened {
+  overflow-y: scroll;
+}
+
+.mm-panels > .mm-panel.mm-hasnavbar {
+  right: -18px;
+}
+
+.mm-listview > li:not(.mm-divider):after {
+  display: none;
+}
+
+.mm-menu.mm-theme-black .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview > li.mm-selected > span {
+  background-color: transparent;
+  color: #F9C869;
+}
+
+.mm-panels > .mm-panel:after, .mm-panels > .mm-panel:before {
+  height: 0;
+}
+
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview {
+  margin-top: 0;
+}
+
+.mm-listview > li > a {
+  -webkit-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+  padding-left: 14%;
+  padding-right: 14%;
+  padding-top: 8px;
+}
+
+.mm-listview > li > a:hover {
+  color: #F9C869;
+}
+
+.mm-listview > li > a:hover:before {
+  color: #F9C869;
+}
+
+.mm-listview > li > a::before {
+  content: '\f219';
+  font-family: fontawesome;
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #FFF;
+  -webkit-transition: color .25s ease;
+  -o-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+.mm-listview > li.active > a {
+  color: #F9C869;
 }
 
 /*==========  Desktop First  ==========*/

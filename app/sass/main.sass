@@ -27,6 +27,17 @@ body
     overflow-x: hidden
     opacity: 1
 
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.text-center
+    text-align: center
+
+
+
+.ishome
     .site-header
         min-height: 700px
         height: 100vh
@@ -58,7 +69,6 @@ body
         font-size: 22px
         margin-right: 3px
 
-
 section, header
     position: relative
     background-size: cover
@@ -67,13 +77,7 @@ section, header
 section
     background-color: $white
 
-.img-responsive
-    display: block
-    max-width: 100%
-    height: auto
 
-.text-center
-    text-align: center
 
 .hamburger
     position: absolute
@@ -81,12 +85,71 @@ section
     top: 34px
     .hamburger-box
         width: 34px
-        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
-            width: 34px
-            height: 2px
-            border-radius: 0
-            color: $white
-            background-color: $white
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+    width: 34px
+    height: 2px
+    border-radius: 0
+    background-color: $white
+
+.mm-navbar .mm-title
+    padding: 0
+
+.mm-navbar
+    height: auto
+    position: relative
+    border: 0
+    .mm-title img
+        width: 128px
+        height: auto
+        margin: 10px 0 35px
+
+
+
+html.mm-opened
+    overflow-y: scroll
+
+.mm-panels > .mm-panel.mm-hasnavbar
+    right: -18px
+
+.mm-listview > li:not(.mm-divider):after
+    display: none
+
+.mm-menu.mm-theme-black .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview > li.mm-selected > span
+    background-color: transparent
+    color: $accent
+
+.mm-panels > .mm-panel:after, .mm-panels > .mm-panel:before
+    height: 0
+
+.mm-panels > .mm-panel > .mm-listview:first-child, .mm-panels > .mm-panel > .mm-navbar + .mm-listview
+    margin-top: 0
+
+.mm-listview
+    > li
+        > a
+            transition: color .25s ease
+            padding:
+                left: 14%
+                right: 14%
+                top: 8px
+            &:hover
+                color: $accent
+                &:before
+                    color: $accent
+            &::before
+                content: '\f219'
+                font-family: fontawesome
+                margin-right: 8px
+                text-decoration: none
+                font-size: 12px
+                color: $white
+                transition: color .25s ease
+        &.active
+            &>a
+                color: $accent
+
+
 
 
 @import "media"

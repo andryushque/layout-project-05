@@ -40,6 +40,7 @@ body
     text-align: center
 
 
+/*==========  Button  ==========*/
 
 .button
   display: inline-block
@@ -93,6 +94,7 @@ body
         background-color: rgba(#000, .4)
 
 
+/*==========  My-header ==========*/
 
 .ishome
     .site-header
@@ -309,6 +311,13 @@ html.mm-opened
         font-family: firasans, sans-serif
         text-align: center
 
+
+/*==========  My-content  ==========*/
+
+$colors: $blue, $red, $accent
+@for $i from 1 through length($colors)
+    .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+        background-color: nth($colors, $i)
 
 
 @import "media"

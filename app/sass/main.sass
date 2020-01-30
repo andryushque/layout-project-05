@@ -27,6 +27,10 @@ body
     overflow-x: hidden
     opacity: 1
 
+.h1, .h2, .h3, .h4, .h5, .h6
+    line-height: 1.4
+    text-transform: uppercase
+
 .img-responsive
     display: block
     max-width: 100%
@@ -34,6 +38,59 @@ body
 
 .text-center
     text-align: center
+
+
+
+.button
+  display: inline-block
+  border: none
+  color: $white
+  text-decoration: none
+  background-color: $accent
+  padding: 16px 45px
+  font-size: 13px
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 3px
+  border-radius: 4px
+  text-align: center
+  position: relative
+  outline: none
+  transition: background-color .1s ease
+  &::after
+      transition: background-color .2s ease
+      position: absolute
+      content: ''
+      height: 4px
+      bottom: 0
+      width: 100%
+      background-color: darken($accent, 50%)
+      opacity: .18
+      border-bottom-left-radius: 2px
+      border-bottom-right-radius: 2px
+      left: 0
+  &:focus, &:hover
+      text-decoration: none
+      color: $white
+  &:hover
+      background-color: lighten($accent, 5%)
+      &::after
+          opacity: .22
+  &:active
+      background-color: darken($accent, 5%)
+      &::after
+          opacity: .32
+  &.button-white
+    background-color: $white
+    color: #444
+    &::after
+      background-color: rgba(#000, .6)
+    &:hover
+      &::after
+        background-color: rgba(#000, .2)
+    &:active
+      &::after
+        background-color: rgba(#000, .4)
 
 
 
@@ -65,7 +122,7 @@ body
     white-space: nowrap
 
     .fa
-        color: #555
+        color: $grey
         font-size: 22px
         margin-right: 3px
 
@@ -148,6 +205,64 @@ html.mm-opened
         &.active
             &>a
                 color: $accent
+
+
+
+.header-flex
+    display: flex
+    height: 100%
+    position: relative
+    top: 0
+
+.flex-center
+    margin: auto
+
+.header-composition
+    text-align: center
+    position: relative
+    p
+        margin-top: 40px
+    .button
+        margin-top: 25px
+
+.header-welcome
+    p
+        display: flex
+        align-items: center
+        white-space: nowrap
+        margin: 0
+        margin-bottom: -10px
+        font-size: 14px
+        text-transform: uppercase
+        span
+            margin: 0 10px
+        &::before, &::after
+            content: ''
+            height: 1px
+            width: 100%
+            position: relative
+            background-color: $white
+            display: inline-block
+    .h1
+        margin: 0
+        white-space: nowrap
+        border-bottom: 1px solid $white
+        font-size: 70px
+        font-weight: 100
+        line-height: 1.6
+    strong
+        display: block
+        font-size: 17px
+        text-transform: uppercase
+        margin-top: 25px
+        .fa
+            margin-right: 10px
+            font-size: 12px
+            color: $grey
+            &:last-child
+                margin-left: 10px
+                margin-right: inherit
+
 
 
 

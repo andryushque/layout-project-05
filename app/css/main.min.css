@@ -8534,6 +8534,11 @@ body {
   opacity: 1;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -8542,6 +8547,80 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #F9C869;
+  padding: 16px 45px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  -webkit-transition: background-color .1s ease;
+  -o-transition: background-color .1s ease;
+  transition: background-color .1s ease;
+}
+
+.button::after {
+  -webkit-transition: background-color .2s ease;
+  -o-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+  position: absolute;
+  content: '';
+  height: 4px;
+  bottom: 0;
+  width: 100%;
+  background-color: #5f4004;
+  opacity: .18;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  left: 0;
+}
+
+.button:focus, .button:hover {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.button:hover {
+  background-color: #fad182;
+}
+
+.button:hover::after {
+  opacity: .22;
+}
+
+.button:active {
+  background-color: #f8bf50;
+}
+
+.button:active::after {
+  opacity: .32;
+}
+
+.button.button-white {
+  background-color: #FFF;
+  color: #444;
+}
+
+.button.button-white::after {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.button.button-white:hover::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button.button-white:active::after {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .ishome .site-header {
@@ -8678,6 +8757,89 @@ html.mm-opened {
 
 .mm-listview > li.active > a {
   color: #F9C869;
+}
+
+.header-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.flex-center {
+  margin: auto;
+}
+
+.header-composition {
+  text-align: center;
+  position: relative;
+}
+
+.header-composition p {
+  margin-top: 40px;
+}
+
+.header-composition .button {
+  margin-top: 25px;
+}
+
+.header-welcome p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  margin: 0;
+  margin-bottom: -10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.header-welcome p span {
+  margin: 0 10px;
+}
+
+.header-welcome p::before, .header-welcome p::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: relative;
+  background-color: #FFF;
+  display: inline-block;
+}
+
+.header-welcome .h1 {
+  margin: 0;
+  white-space: nowrap;
+  border-bottom: 1px solid #FFF;
+  font-size: 70px;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.header-welcome strong {
+  display: block;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.header-welcome strong .fa {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+.header-welcome strong .fa:last-child {
+  margin-left: 10px;
+  margin-right: inherit;
 }
 
 /*==========  Desktop First  ==========*/

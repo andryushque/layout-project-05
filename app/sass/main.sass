@@ -208,7 +208,7 @@ html.mm-opened
 
 
 
-.header-flex
+.header-info
     display: flex
     height: 100%
     position: relative
@@ -263,7 +263,51 @@ html.mm-opened
                 margin-left: 10px
                 margin-right: inherit
 
+.header-social
+    position: absolute
+    display: flex
+    right: 0
+    top: 0
+    height: 100%
+    border-left: 1px solid rgba($white, .1)
+    padding: 0 13px
 
+.social
+    margin: auto
+    ul, li
+        margin: 0
+        padding: 0
+        list-style-type: none
+    a
+        display: block
+        width: 38px
+        height: 38px
+        margin: 18px 0
+        text-align: center
+        font-size: 19px
+        line-height: 38px
+        border-radius: 10em
+        color: #2C2C2C
+        background-color: rgba($white, .2)
+        transition: background-color .25s ease
+        &:hover
+            background-color: rgba($white, .4)
+
+.header-contacts
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 13px 0
+    width: 100%
+    border-top: 1px solid rgba($white, .15)
+    background-color: rgba(#151515, .15)
+    .fa
+        margin-right: 5px
+        font-size: 16px
+        color: $grey
+    .header-phone
+        font-family: firasans, sans-serif
+        text-align: center
 
 
 

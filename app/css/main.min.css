@@ -8759,7 +8759,7 @@ html.mm-opened {
   color: #F9C869;
 }
 
-.header-flex {
+.header-info {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8840,6 +8840,70 @@ html.mm-opened {
 .header-welcome strong .fa:last-child {
   margin-left: 10px;
   margin-right: inherit;
+}
+
+.header-social {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 13px;
+}
+
+.social {
+  margin: auto;
+}
+
+.social ul, .social li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin: 18px 0;
+  text-align: center;
+  font-size: 19px;
+  line-height: 38px;
+  border-radius: 10em;
+  color: #2C2C2C;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-transition: background-color .25s ease;
+  -o-transition: background-color .25s ease;
+  transition: background-color .25s ease;
+}
+
+.social a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.header-contacts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 13px 0;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(21, 21, 21, 0.15);
+}
+
+.header-contacts .fa {
+  margin-right: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+.header-contacts .header-phone {
+  font-family: firasans, sans-serif;
+  text-align: center;
 }
 
 /*==========  Desktop First  ==========*/

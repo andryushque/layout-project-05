@@ -9,5 +9,5 @@ Website of beauty saloon S&Mitler.
 - SASS
 - Gulp
 - flex-box, responsive design (desktop-first)
-- fontawesome, mmenu, css-hamburger
+- fontawesome, mmenu, css-hamburger, owl.carousel
 -

@@ -8904,12 +8904,12 @@ html.mm-opening .mm-menu.mm-offcanvas.mm-front, html.mm-opening .mm-menu.mm-offc
 }
 
 .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {
-  background: url(fotorama.png) no-repeat;
+  background: url() no-repeat;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {
-    background: url(fotorama@2x.png) 0 0/96px 160px no-repeat;
+    background: url() 0 0/96px 160px no-repeat;
   }
 }
 
@@ -9672,6 +9672,21 @@ section {
   background-color: #FFF;
 }
 
+section.inverse {
+  color: #FFF;
+  background-color: #1A1A1A;
+}
+
+section .h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #F9C869;
+}
+
+section .h2 span {
+  color: #FFF;
+}
+
 .hamburger {
   position: absolute;
   right: 0;
@@ -10062,6 +10077,77 @@ html.mm-opened {
           backface-visibility: inherit;
 }
 
+.s-king, .s-review, .s-partners {
+  padding: 5% 0;
+}
+
+.s-king p {
+  margin: 30px 0;
+  font-size: 18px;
+}
+
+.section-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3D3C3C;
+  opacity: .92;
+}
+
+.fotorama {
+  background-color: rgba(26, 26, 26, 0.4);
+}
+
+.fotorama__nav-wrap {
+  position: absolute;
+  bottom: 15px;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.fotorama__thumb {
+  border: 4px #FFF solid;
+  -webkit-transition: border-color .5s ease;
+  -o-transition: border-color .5s ease;
+  transition: border-color .5s ease;
+}
+
+.fotorama__thumb-border {
+  border-color: #c18208;
+}
+
+.fotorama__active .fotorama__thumb {
+  border-color: #c18208;
+}
+
+.fotorama__nav:after, .fotorama__stage:after, .fotorama__nav:before, .fotorama__stage:before {
+  display: none;
+}
+
+.fotorama__arr--next::before, .fotorama__arr--prev::before {
+  font-family: fontawesome;
+  font-size: 32px;
+}
+
+.fotorama__arr--next::before {
+  content: '\f105';
+}
+
+.fotorama__arr--prev {
+  left: 25px;
+}
+
+.fotorama__arr--prev::before {
+  content: '\f104';
+}
+
+.fotorama__active .fotorama__thumb {
+  border-color: #c18208;
+}
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -10077,6 +10163,9 @@ html.mm-opened {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .s-king, .s-review, .s-partners {
+    padding: 8% 0;
   }
 }
 

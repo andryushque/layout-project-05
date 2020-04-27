@@ -74,6 +74,12 @@ $(function() {
     $('.carousel-services-composition .h3').each(function(){
         var ths = $(this);
         ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
-  });
+    });
+
+    /*=== header first word - to span ===*/
+    $('section .h2').each(function(){
+        var ths = $(this);
+        ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
+    });
 
 });

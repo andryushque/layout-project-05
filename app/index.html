@@ -177,8 +177,8 @@
                     <div class="carousel-services-image" style="background-image: url('img/service3.png');"></div>
                 </div>
 
-            </div> <!-- /.carousel-services -->
-        </section>
+            </div>
+        </section> <!-- /.s-services -->
 
         <section class="s-king inverse section-overlay" style="background-image: url('img/photos/foto-16.jpg');">
             <div class="container">
@@ -201,6 +201,53 @@
                 </div>
             </div>
         </section> <!-- /.s-king -->
+
+        <section class="s-call inverse" style="background-image: url('img/bg-call.jpg');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6">
+                        <form class="callback">
+                            <div class="success">
+                                <span>Спасибо за заявку!</span>
+                            </div>
+
+                            <!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="SMitler">
+                            <input type="hidden" name="admin_email" value="andryushque@gmail.com">
+                            <input type="hidden" name="form_subject" value="Заявка сайта SMitler">
+                            <!-- END Hidden Required Fields -->
+
+                            <input type="hidden" name="Страница" value="">
+
+                            <div class="callback-logo">
+                                <img src="img/logo-2.svg" alt="Салон красоты S&Mitler">
+                            </div>
+
+                            <div class="formheader h2">
+                                Оставить заявку
+                            </div>
+                            <p>
+                                Оставьте заявку и мы перезвоним вам в течение 15 минут.
+                            </p>
+
+                            <input type="text" name="Name" placeholder="Ваше имя..." required>
+                            <input type="text" name="Phone" placeholder="Ваш телефон..." required>
+                            <select name="Service">
+                                <option value disabled selected>Выбрать услугу...</option>
+                                <option>Парикмахерский сервис</option>
+                                <option>Космитологический сервис</option>
+                                <option>Маникюрный сервис</option>
+                                <option>Массаж и SPA</option>
+                                <option>Солярий</option>
+                            </select>
+                            <button class="button button-white">
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- /.s-call -->
 
     </div> <!-- /.my-content -->
 

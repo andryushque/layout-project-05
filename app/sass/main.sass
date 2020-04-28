@@ -138,6 +138,8 @@ section
     &.inverse
         color: $white
         background-color: $dark
+        &.s-call
+            background-color: $white
 
     .h2
         font-size: 30px
@@ -431,6 +433,18 @@ $colors: $blue, $red, $accent
             margin: 30px 0
             font-size: 18px
 
+    &-call
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: 10%
+        &::before
+            content: ''
+            width: 50%
+            height: 100%
+            position: absolute
+            right: 0
+            background-color: rgba($red, .92)
+
 .section-overlay
     &::before
         content: ''
@@ -441,6 +455,7 @@ $colors: $blue, $red, $accent
         height: 100%
         background-color: $over
         opacity: .92
+
 
 .fotorama
     background-color: rgba($dark, .4)
@@ -480,5 +495,123 @@ $colors: $blue, $red, $accent
     &__active
         .fotorama__thumb
             border-color: darken($accent, 30)
+
+
+input, textarea, select,
+.selectize-control .selectize-input,
+.selectize-control.single .selectize-input.input-active
+    display: inline-block
+    outline: none
+    border: rgba($dark, .1) 1px solid
+    border-bottom: rgba($dark, .1) 2px solid
+    border-radius: 2px
+    padding: 8px 22px
+    background-color: transparent
+    font-size: 16px
+    color: $dark
+
+select
+    padding: 10px 22px
+
+.selectize-control .selectize-input
+    box-shadow: none
+    overflow: inherit
+    line-height: inherit
+    text-align: left
+
+    input
+        font-size: 16px
+    &.focus
+        box-shadow: none
+    &.dropdown-active::before
+        background-color: transparent
+
+.selectize-control.single
+    .selectize-input, &.dropdown-active
+        &::after
+            border: none
+            content: '\f107'
+            font-family: fontawesome
+            position: absolute
+            top: 12px
+            right: 30px
+        &.dropdown-active::after
+            content: '\f106'
+
+    .selectize-dropdown
+        font-size: 15px
+        border: none
+        border-radius: 0
+        text-align: left
+        &-content
+            .option
+                padding: 10px 22px
+                &.active
+                    background-color: lighten($red, 15)
+
+
+.success
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    text-transform: uppercase
+    font-weight: bold
+    display: none // -> common.js - to display: flex
+    z-index: 10
+
+    span
+        margin: auto
+
+    & ~ *
+        transition: all .5s ease
+
+    &.active
+        & ~ *
+            opacity: .5
+            filter: blur(10px)
+
+
+.callback
+    padding: 25% 0
+    position: relative
+
+    &-logo
+        img
+            width: 100px
+            height: auto
+            margin-bottom: 10px
+
+    .formheader
+        margin: 0
+        font-size: 30px
+        color: $white
+
+    p
+        margin: 0
+
+    input, textarea, select,
+    .selectize-control .selectize-input,
+    .selectize-control.single .selectize-input.input-active
+        width: 100%
+        margin-top: 15px
+        color: $white
+
+        &::-webkit-input-placeholder
+            color: $white
+            opacity: 1
+        &::-moz-placeholder
+            color: $white
+            opacity: 1
+        &::-ms-input-placeholder
+            color: $white
+
+    option
+        color: $dark
+
+    .button
+        margin-top: 30px
+
 
 @import "media"

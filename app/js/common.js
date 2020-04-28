@@ -60,6 +60,7 @@ $(function() {
         }
     });
 
+
     /*=== carouselService - image height ===*/
     function carouselService() {
         $('.carousel-services-item').each(function() {
@@ -76,10 +77,39 @@ $(function() {
         ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
     });
 
+
     /*=== header first word - to span ===*/
     $('section .h2').each(function(){
         var ths = $(this);
         ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
+    });
+
+
+    /*=== selectize ===*/
+    $('select').selectize();
+
+
+    //E-mail Ajax Send
+    $('form.callback').submit(function() {
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: th.serialize()
+        }).done(function() {
+            $(th).find('.success')
+                .addClass('active')
+                .css('display', 'flex')
+                .hide()
+                .fadeIn();
+            setTimeout(function() {
+                $(th).find('.success')
+                    .removeClass('active')
+                    .fadeOut();
+                th.trigger("reset");
+            }, 3000);
+        });
+        return false;
     });
 
 });

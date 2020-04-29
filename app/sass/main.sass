@@ -614,4 +614,68 @@ select
         margin-top: 30px
 
 
+.reviews
+    text-align: center
+
+    .owl-dots
+        width: 100%
+        display: inline-block
+        margin-top: 60px
+        .owl-dot
+            width: 8px
+            height: 8px
+            display: inline-block
+            margin: 5px
+            border-radius: 50%
+            background-color: $white
+            transition: background-color .5s ease, transform .5s ease
+            &.active
+                background-color: $accent
+                transform: scale(1.25)
+
+
+.review
+    margin-top: 20px
+    &-header
+        font-family: 'Times New Roman', serif
+        font-style: italic
+        font-size: 30px
+        font-weight: bold
+    &-date
+        font-family: 'Times New Roman', serif
+        font-style: italic
+        font-size: 15px
+        color: darken($white, 40)
+    &-rating
+        margin: 15px 0 30px
+        font-size: 14px
+        color: $accent
+        .fa
+            margin: 0 3px
+    &-text
+        font-weight: 300
+        color: darken($white, 30)
+
+
+.quotes
+    position: absolute
+    width: 100%
+    &::before, &::after
+        content: ',,'
+        position: absolute
+        font-family: 'Times New Roman', serif
+        font-size: 56px
+        font-weight: bold
+        line-height: 0
+        color: $accent
+        display: block
+    &::before
+        transform: rotate(180deg)
+        top: 200px
+        left: -60px
+    &::after
+        top: 160px
+        right: -60px
+
+
 @import "media"

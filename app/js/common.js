@@ -71,14 +71,14 @@ $(function() {
     }carouselService();
 
 
-    /*=== header last word - to span ===*/
+    /*=== carousel header last word - to span ===*/
     $('.carousel-services-composition .h3').each(function(){
         var ths = $(this);
         ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
     });
 
 
-    /*=== header first word - to span ===*/
+    /*=== section header first word - to span ===*/
     $('section .h2').each(function(){
         var ths = $(this);
         ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
@@ -87,6 +87,15 @@ $(function() {
 
     /*=== selectize ===*/
     $('select').selectize();
+
+
+    /*=== OwlCarousel - reviews ===*/
+    $('.reviews').owlCarousel({
+        loop: true,
+        items: 1,
+        smartSpeed: 700,
+        autoHeight: true
+    });
 
 
     //E-mail Ajax Send

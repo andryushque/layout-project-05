@@ -94,11 +94,29 @@ $(function() {
         loop: true,
         items: 1,
         smartSpeed: 700,
-        autoHeight: true
+        // autoHeight: true
     });
 
 
-    //E-mail Ajax Send
+    /*=== OwlCarousel - partners ===*/
+    $('.partners').owlCarousel({
+        loop: true,
+        items: 4,
+        smartSpeed: 700,
+        dots: false,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+        responsiveClass: true,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 },
+            1200: { items: 4 }
+        }
+    });
+
+
+    /*=== E-mail Ajax Send ===*/
     $('form.callback').submit(function() {
         var th = $(this);
         $.ajax({

@@ -10465,6 +10465,18 @@ html.mm-opened {
   background-color: rgba(248, 104, 104, 0.92);
 }
 
+.s-partners.section-overlay::before {
+  background-color: #FFF;
+}
+
+.s-partners .h2 {
+  margin-top: 10px;
+}
+
+.s-partners .h2 span {
+  color: #F9C869;
+}
+
 .section-overlay::before {
   content: '';
   position: absolute;
@@ -10772,6 +10784,67 @@ select {
   right: -60px;
 }
 
+.partners .partner {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.partners .owl-stage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partners .owl-item {
+  margin-top: 30px;
+}
+
+.partners .owl-item img {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  margin: auto;
+}
+
+.partners .owl-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.partners .owl-nav button {
+  position: absolute;
+  top: 50px;
+  outline: none;
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.partners .owl-nav button .fa {
+  padding: 10px;
+  font-size: 30px;
+  color: #555;
+}
+
+.partners .owl-nav button.owl-prev {
+  left: -60px;
+}
+
+.partners .owl-nav button.owl-next {
+  right: -60px;
+}
+
+.partners .owl-nav button:hover {
+  opacity: .6;
+}
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -10822,6 +10895,15 @@ select {
   }
   .quotes {
     display: none;
+  }
+  .partners .owl-nav button.owl-prev {
+    left: 0;
+  }
+  .partners .owl-nav button.owl-next {
+    right: 0;
+  }
+  .s-partners .h2 {
+    margin: 0;
   }
 }
 

@@ -445,6 +445,14 @@ $colors: $blue, $red, $accent
             right: 0
             background-color: rgba($red, .92)
 
+    &-partners
+        &.section-overlay::before
+            background-color: $white
+        .h2
+            margin-top: 10px
+            span
+                color: $accent
+
 .section-overlay
     &::before
         content: ''
@@ -676,6 +684,45 @@ select
     &::after
         top: 160px
         right: -60px
+
+
+.partners
+    .partner
+        height: 100%
+        display: flex
+        margin: auto
+
+    .owl-stage
+        display: flex
+
+    .owl-item
+        margin-top: 30px
+        img
+            display: inline-block
+            max-width: 100%
+            width: auto
+            margin: auto
+
+    .owl-nav
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 2
+        button
+            position: absolute
+            top: 50px
+            outline: none
+            transition: opacity .5s ease
+            .fa
+                padding: 10px
+                font-size: 30px
+                color: $grey
+            &.owl-prev
+                left: -60px
+            &.owl-next
+                right: -60px
+            &:hover
+                opacity: .6
 
 
 @import "media"

@@ -819,5 +819,27 @@ select
     &:hover
         opacity: 1
 
+.top
+    position: fixed
+    bottom: 25px
+    right: -100px
+    z-index: 12
+
+    width: 50px
+    height: 50px
+
+    cursor: pointer
+
+    border-radius: 10em
+    font-size: 26px
+    line-height: 50px
+    text-align: center
+    color: #2C2C2C
+    background-color: rgba($white, .3)
+    transition: all .5s ease
+    &:hover
+        background-color: rgba($accent, .5)
+    &.active
+        right: 25px
 
 @import "media"

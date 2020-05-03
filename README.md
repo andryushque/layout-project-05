@@ -3,11 +3,12 @@
 ## Description
 Website of beauty saloon S&Mitler.
 
+## Link
+ [surge.sh](http://smitler-by-andryushque.surge.sh/)
+
+
 ## Tech stack
-- HTML5 / CSS3
+- HTML5 / CSS3 / SASS
+- Bootstrap
 - JavaScript / jQuery
-- SASS
 - Gulp
-- flex-box, responsive design (desktop-first)
-- fontawesome, mmenu, css-hamburger, owl.carousel
--

@@ -128,14 +128,6 @@ gulp.task('rsync', function() {
     }));
 });
 
-gulp.task('serveprod', function() {
-  connect.server({
-    root: 'dist/',
-    port: process.env.PORT || 5000, // localhost:5000
-    livereload: false
-  });
-});
-
 gulp.task('removedist', function() { return del.sync('dist'); });
 gulp.task('clearcache', function () { return cache.clearAll(); });
 
